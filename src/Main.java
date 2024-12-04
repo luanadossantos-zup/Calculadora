@@ -52,6 +52,7 @@ public class Main {
                 System.out.println(resultado = primeiroNumero / ultimoNumero);
         }
 
+        scanner.close();
 
     }
 }
