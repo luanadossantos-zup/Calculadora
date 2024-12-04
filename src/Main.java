@@ -18,14 +18,15 @@ public class Main {
             System.out.println("- para subtração");
             System.out.println("* para multiplicação");
             System.out.println("/ para divisão");
+            System.out.println("% para resto de divisão");
 
             operacao = scanner.next().charAt(0);
 
-            if (operacao != '+' && operacao != '-' && operacao != '*' && operacao != '/') {
+            if (operacao != '+' && operacao != '-' && operacao != '*' && operacao != '/' && operacao != '%') {
                 System.out.println("Opção inválida!!!");
             }
 
-        } while (operacao != '+' && operacao != '-' && operacao != '*' && operacao != '/');
+        } while (operacao != '+' && operacao != '-' && operacao != '*' && operacao != '/' && operacao != '%');
 
 
         System.out.println("--> Por último, selecione o último número:");
@@ -50,6 +51,9 @@ public class Main {
 
             case '/' :
                 System.out.println(primeiroNumero / ultimoNumero);
+
+            case '%':
+                System.out.println(primeiroNumero % ultimoNumero);
         }
 
         scanner.close();
