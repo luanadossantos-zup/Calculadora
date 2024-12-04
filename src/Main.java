@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int primeiroNumero, ultimoNumero, resultado;
+        int primeiroNumero, ultimoNumero;
         char operacao;
 
         System.out.println("-----Calculadora Simples-----");
@@ -37,19 +37,19 @@ public class Main {
 
             case '+' :
 
-                System.out.println(resultado = primeiroNumero + ultimoNumero);
+                System.out.println(primeiroNumero + ultimoNumero);
                 break;
 
             case '-' :
-                System.out.println(resultado = primeiroNumero - ultimoNumero);
+                System.out.println(primeiroNumero - ultimoNumero);
                 break;
 
             case '*' :
-                System.out.println(resultado = primeiroNumero * ultimoNumero);
+                System.out.println(primeiroNumero * ultimoNumero);
                 break;
 
             case '/' :
-                System.out.println(resultado = primeiroNumero / ultimoNumero);
+                System.out.println(primeiroNumero / ultimoNumero);
         }
 
         scanner.close();
