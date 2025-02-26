@@ -12,10 +12,7 @@ public class Calculadora {
 
         operacao = getOperacao(scanner);
 
-
         ultimoNumero = getUltimoNumero(scanner);
-
-
 
         System.out.println(resultado(operacao, primeiroNumero, ultimoNumero));
 
