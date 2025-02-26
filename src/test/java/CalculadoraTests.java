@@ -10,5 +10,12 @@ public class CalculadoraTests {
         assertEquals(15, soma);
     }
 
+    @Test
+    public void testSuccessSubtracao() {
+        Integer subtracao = Calculadora.subtracao(20,5);
+        assertEquals(15, subtracao);
+    }
+
+
 
 }
