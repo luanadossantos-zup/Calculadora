@@ -23,7 +23,7 @@ public class Calculadora {
 
     }
 
-    private static int getPrimeiroNumero(Scanner scanner) {
+    public static int getPrimeiroNumero(Scanner scanner) {
         int primeiroNumero;
         System.out.println("--> Digite o primeiro número:");
 
@@ -51,7 +51,7 @@ public class Calculadora {
         return operacao;
     }
 
-    private static int getUltimoNumero(Scanner scanner) {
+    public static int getUltimoNumero(Scanner scanner) {
         int ultimoNumero;
         System.out.println("--> Por último, selecione o último número:");
         ultimoNumero = scanner.nextInt();
