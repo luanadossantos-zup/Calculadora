@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Calculadora.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Calculadora</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Calculadora.java</span></div><h1>Calculadora.java</h1><pre class="source lang-java linenums">import java.util.Scanner;
+
+<span class="nc" id="L3">public class Calculadora {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L5">        Scanner scanner = new Scanner(System.in);</span>
+        int primeiroNumero, ultimoNumero;
+        char operacao;
+
+<span class="nc" id="L9">        System.out.println(&quot;-----Calculadora Simples-----&quot;);</span>
+
+<span class="nc" id="L11">        primeiroNumero = getPrimeiroNumero(scanner);</span>
+
+<span class="nc" id="L13">        operacao = getOperacao(scanner);</span>
+
+
+<span class="nc" id="L16">        ultimoNumero = getUltimoNumero(scanner);</span>
+
+
+
+<span class="nc" id="L20">        System.out.println(resultado(operacao, primeiroNumero, ultimoNumero));</span>
+
+<span class="nc" id="L22">        scanner.close();</span>
+
+<span class="nc" id="L24">    }</span>
+
+    private static int getPrimeiroNumero(Scanner scanner) {
+        int primeiroNumero;
+<span class="nc" id="L28">        System.out.println(&quot;--&gt; Digite o primeiro número:&quot;);</span>
+
+<span class="nc" id="L30">        primeiroNumero = scanner.nextInt();</span>
+<span class="nc" id="L31">        return primeiroNumero;</span>
+    }
+
+    public static char getOperacao(Scanner scanner) {
+        char operacao;
+        do {
+<span class="nc" id="L37">            System.out.println(&quot;--&gt; Por favor, digite uma opção:&quot;);</span>
+<span class="nc" id="L38">            System.out.println(&quot;+ para adição&quot;);</span>
+<span class="nc" id="L39">            System.out.println(&quot;- para subtração&quot;);</span>
+<span class="nc" id="L40">            System.out.println(&quot;* para multiplicação&quot;);</span>
+<span class="nc" id="L41">            System.out.println(&quot;/ para divisão&quot;);</span>
+<span class="nc" id="L42">            System.out.println(&quot;% para resto de divisão&quot;);</span>
+
+<span class="nc" id="L44">            operacao = scanner.next().charAt(0);</span>
+
+<span class="nc bnc" id="L46" title="All 10 branches missed.">            if (operacao != '+' &amp;&amp; operacao != '-' &amp;&amp; operacao != '*' &amp;&amp; operacao != '/' &amp;&amp; operacao != '%') {</span>
+<span class="nc" id="L47">                System.out.println(&quot;Opção inválida!!!&quot;);</span>
+            }
+
+<span class="nc bnc" id="L50" title="All 10 branches missed.">        } while (operacao != '+' &amp;&amp; operacao != '-' &amp;&amp; operacao != '*' &amp;&amp; operacao != '/' &amp;&amp; operacao != '%');</span>
+<span class="nc" id="L51">        return operacao;</span>
+    }
+
+    private static int getUltimoNumero(Scanner scanner) {
+        int ultimoNumero;
+<span class="nc" id="L56">        System.out.println(&quot;--&gt; Por último, selecione o último número:&quot;);</span>
+<span class="nc" id="L57">        ultimoNumero = scanner.nextInt();</span>
+<span class="nc" id="L58">        return ultimoNumero;</span>
+    }
+
+    public static int resultado(char operacao, int primeiroNumero, int ultimoNumero) {
+
+<span class="fc" id="L63">        int numero = 0;</span>
+<span class="pc bpc" id="L64" title="1 of 6 branches missed.">        switch (operacao) {</span>
+
+            case '+' :
+<span class="fc" id="L67">                numero = soma(primeiroNumero, ultimoNumero);</span>
+<span class="fc" id="L68">                return numero;</span>
+
+            case '-' :
+<span class="fc" id="L71">                numero = subtracao(primeiroNumero, ultimoNumero);</span>
+<span class="fc" id="L72">                return numero;</span>
+
+            case '*' :
+<span class="fc" id="L75">                numero = multiplicacao(primeiroNumero, ultimoNumero);</span>
+<span class="fc" id="L76">                return numero;</span>
+
+            case '/' :
+
+<span class="fc" id="L80">                numero = divisao(primeiroNumero, ultimoNumero);</span>
+<span class="fc" id="L81">                return numero;</span>
+
+            case '%':
+<span class="fc" id="L84">                numero = resto(primeiroNumero, ultimoNumero);</span>
+<span class="fc" id="L85">                return numero;</span>
+
+        }
+
+<span class="nc" id="L89">        return numero;</span>
+    }
+
+    public static int resto(int primeiroNumero, int ultimoNumero) {
+<span class="fc" id="L93">        return primeiroNumero % ultimoNumero;</span>
+    }
+
+    public static int divisao(int primeiroNumero, int ultimoNumero) {
+<span class="fc" id="L97">        return primeiroNumero / ultimoNumero;</span>
+    }
+
+    public static int multiplicacao(int primeiroNumero, int ultimoNumero) {
+<span class="fc" id="L101">        return primeiroNumero * ultimoNumero;</span>
+    }
+
+    public static int subtracao(int primeiroNumero, int ultimoNumero) {
+<span class="fc" id="L105">        return primeiroNumero - ultimoNumero;</span>
+    }
+
+    public static int soma(int primeiroNumero, int ultimoNumero) {
+<span class="fc" id="L109">        return primeiroNumero + ultimoNumero;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
