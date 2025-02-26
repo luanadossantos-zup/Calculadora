@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Calculadora {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int primeiroNumero, ultimoNumero;
@@ -16,7 +16,8 @@ public class Main {
         ultimoNumero = getUltimoNumero(scanner);
 
 
-        resultado(operacao, primeiroNumero, ultimoNumero);
+
+        System.out.println(resultado(operacao, primeiroNumero, ultimoNumero));
 
         scanner.close();
 
@@ -30,7 +31,7 @@ public class Main {
         return primeiroNumero;
     }
 
-    private static char getOperacao(Scanner scanner) {
+    public static char getOperacao(Scanner scanner) {
         char operacao;
         do {
             System.out.println("--> Por favor, digite uma opção:");
@@ -57,47 +58,54 @@ public class Main {
         return ultimoNumero;
     }
 
-    private static void resultado(char operacao, int primeiroNumero, int ultimoNumero) {
+    public static int resultado(char operacao, int primeiroNumero, int ultimoNumero) {
+
+        int numero = 0;
         switch (operacao) {
 
             case '+' :
-
-                System.out.println(soma(primeiroNumero, ultimoNumero));
-                break;
+                numero = soma(primeiroNumero, ultimoNumero);
+                return numero;
 
             case '-' :
-                System.out.println(subtracao(primeiroNumero, ultimoNumero));
-                break;
+                numero = subtracao(primeiroNumero, ultimoNumero);
+                return numero;
 
             case '*' :
-                System.out.println(multiplicacao(primeiroNumero, ultimoNumero));
-                break;
+                numero = multiplicacao(primeiroNumero, ultimoNumero);
+                return numero;
 
             case '/' :
-                System.out.println(divisao(primeiroNumero, ultimoNumero));
+
+                numero = divisao(primeiroNumero, ultimoNumero);
+                return numero;
 
             case '%':
-                System.out.println(resto(primeiroNumero, ultimoNumero));
+                numero = resto(primeiroNumero, ultimoNumero);
+                return numero;
+
         }
+
+        return numero;
     }
 
-    private static int resto(int primeiroNumero, int ultimoNumero) {
+    public static int resto(int primeiroNumero, int ultimoNumero) {
         return primeiroNumero % ultimoNumero;
     }
 
-    private static int divisao(int primeiroNumero, int ultimoNumero) {
+    public static int divisao(int primeiroNumero, int ultimoNumero) {
         return primeiroNumero / ultimoNumero;
     }
 
-    private static int multiplicacao(int primeiroNumero, int ultimoNumero) {
+    public static int multiplicacao(int primeiroNumero, int ultimoNumero) {
         return primeiroNumero * ultimoNumero;
     }
 
-    private static int subtracao(int primeiroNumero, int ultimoNumero) {
+    public static int subtracao(int primeiroNumero, int ultimoNumero) {
         return primeiroNumero - ultimoNumero;
     }
 
-    private static int soma(int primeiroNumero, int ultimoNumero) {
+    public static int soma(int primeiroNumero, int ultimoNumero) {
         return primeiroNumero + ultimoNumero;
     }
 }
