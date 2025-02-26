@@ -16,6 +16,12 @@ public class CalculadoraTests {
         assertEquals(15, subtracao);
     }
 
+    @Test
+    public void testMultiplicacao() {
+        Integer multiplicacao = Calculadora.multiplicacao(10,5);
+        assertEquals(50,multiplicacao);
+
+    }
 
 
 }
