@@ -35,5 +35,15 @@ public class CalculadoraTests {
         assertEquals(0,resto);
     }
 
+    @Test
+    public void testResultado() {
+        assertEquals(5, Calculadora.resultado('+', 2, 3));
+        assertEquals(-1, Calculadora.resultado('-', 2, 3));
+        assertEquals(6, Calculadora.resultado('*', 2, 3));
+        assertEquals(2, Calculadora.resultado('/', 6, 3));
+        assertEquals(1, Calculadora.resultado('%', 7, 3));
+
+    }
+
 
 }
