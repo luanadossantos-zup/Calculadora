@@ -23,5 +23,11 @@ public class CalculadoraTests {
 
     }
 
+    @Test
+    public void testDivisao() {
+        Integer divisao = Calculadora.divisao(20,4);
+        assertEquals(5,divisao);
+    }
+
 
 }
