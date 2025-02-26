@@ -23,39 +23,39 @@
 
 <span class="nc" id="L24">    }</span>
 
-    private static int getPrimeiroNumero(Scanner scanner) {
+    public static int getPrimeiroNumero(Scanner scanner) {
         int primeiroNumero;
-<span class="nc" id="L28">        System.out.println(&quot;--&gt; Digite o primeiro número:&quot;);</span>
+<span class="fc" id="L28">        System.out.println(&quot;--&gt; Digite o primeiro número:&quot;);</span>
 
-<span class="nc" id="L30">        primeiroNumero = scanner.nextInt();</span>
-<span class="nc" id="L31">        return primeiroNumero;</span>
+<span class="fc" id="L30">        primeiroNumero = scanner.nextInt();</span>
+<span class="fc" id="L31">        return primeiroNumero;</span>
     }
 
     public static char getOperacao(Scanner scanner) {
         char operacao;
         do {
-<span class="nc" id="L37">            System.out.println(&quot;--&gt; Por favor, digite uma opção:&quot;);</span>
-<span class="nc" id="L38">            System.out.println(&quot;+ para adição&quot;);</span>
-<span class="nc" id="L39">            System.out.println(&quot;- para subtração&quot;);</span>
-<span class="nc" id="L40">            System.out.println(&quot;* para multiplicação&quot;);</span>
-<span class="nc" id="L41">            System.out.println(&quot;/ para divisão&quot;);</span>
-<span class="nc" id="L42">            System.out.println(&quot;% para resto de divisão&quot;);</span>
+<span class="fc" id="L37">            System.out.println(&quot;--&gt; Por favor, digite uma opção:&quot;);</span>
+<span class="fc" id="L38">            System.out.println(&quot;+ para adição&quot;);</span>
+<span class="fc" id="L39">            System.out.println(&quot;- para subtração&quot;);</span>
+<span class="fc" id="L40">            System.out.println(&quot;* para multiplicação&quot;);</span>
+<span class="fc" id="L41">            System.out.println(&quot;/ para divisão&quot;);</span>
+<span class="fc" id="L42">            System.out.println(&quot;% para resto de divisão&quot;);</span>
 
-<span class="nc" id="L44">            operacao = scanner.next().charAt(0);</span>
+<span class="fc" id="L44">            operacao = scanner.next().charAt(0);</span>
 
-<span class="nc bnc" id="L46" title="All 10 branches missed.">            if (operacao != '+' &amp;&amp; operacao != '-' &amp;&amp; operacao != '*' &amp;&amp; operacao != '/' &amp;&amp; operacao != '%') {</span>
-<span class="nc" id="L47">                System.out.println(&quot;Opção inválida!!!&quot;);</span>
+<span class="fc bfc" id="L46" title="All 10 branches covered.">            if (operacao != '+' &amp;&amp; operacao != '-' &amp;&amp; operacao != '*' &amp;&amp; operacao != '/' &amp;&amp; operacao != '%') {</span>
+<span class="fc" id="L47">                System.out.println(&quot;Opção inválida!!!&quot;);</span>
             }
 
-<span class="nc bnc" id="L50" title="All 10 branches missed.">        } while (operacao != '+' &amp;&amp; operacao != '-' &amp;&amp; operacao != '*' &amp;&amp; operacao != '/' &amp;&amp; operacao != '%');</span>
-<span class="nc" id="L51">        return operacao;</span>
+<span class="fc bfc" id="L50" title="All 10 branches covered.">        } while (operacao != '+' &amp;&amp; operacao != '-' &amp;&amp; operacao != '*' &amp;&amp; operacao != '/' &amp;&amp; operacao != '%');</span>
+<span class="fc" id="L51">        return operacao;</span>
     }
 
-    private static int getUltimoNumero(Scanner scanner) {
+    public static int getUltimoNumero(Scanner scanner) {
         int ultimoNumero;
-<span class="nc" id="L56">        System.out.println(&quot;--&gt; Por último, selecione o último número:&quot;);</span>
-<span class="nc" id="L57">        ultimoNumero = scanner.nextInt();</span>
-<span class="nc" id="L58">        return ultimoNumero;</span>
+<span class="fc" id="L56">        System.out.println(&quot;--&gt; Por último, selecione o último número:&quot;);</span>
+<span class="fc" id="L57">        ultimoNumero = scanner.nextInt();</span>
+<span class="fc" id="L58">        return ultimoNumero;</span>
     }
 
     public static int resultado(char operacao, int primeiroNumero, int ultimoNumero) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="CalculadoraTests" time="0.088" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="CalculadoraTests" time="0.11" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\luana.silva\AppData\Local\Temp\surefire14770889342203412955\surefirebooter-20250226150615283_3.jar C:\Users\luana.silva\AppData\Local\Temp\surefire14770889342203412955 2025-02-26T15-06-14_884-jvmRun1 surefire-20250226150615283_1tmp surefire_0-20250226150615283_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\luana.silva\AppData\Local\Temp\surefire2242658123934841290\surefirebooter-20250226160555516_3.jar C:\Users\luana.silva\AppData\Local\Temp\surefire2242658123934841290 2025-02-26T16-05-55_169-jvmRun1 surefire-20250226160555516_1tmp surefire_0-20250226160555516_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\luana.silva\IdeaProjects\Calculadora\target\test-classes;C:\Users\luana.silva\IdeaProjects\Calculadora\target\classes;C:\Users\luana.silva\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\luana.silva\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\luana.silva\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\luana.silva\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\luana.silva\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\luana.silva\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\luana.silva\AppData\Local\Temp\surefire14770889342203412955\surefirebooter-20250226150615283_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\luana.silva\AppData\Local\Temp\surefire2242658123934841290\surefirebooter-20250226160555516_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -57,10 +57,64 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testSuccessSoma" classname="CalculadoraTests" time="0.044"/>
-  <testcase name="testResto" classname="CalculadoraTests" time="0.001"/>
-  <testcase name="testResultado" classname="CalculadoraTests" time="0.004"/>
-  <testcase name="testSuccessSubtracao" classname="CalculadoraTests" time="0.001"/>
-  <testcase name="testDivisao" classname="CalculadoraTests" time="0.001"/>
-  <testcase name="testMultiplicacao" classname="CalculadoraTests" time="0.001"/>
+  <testcase name="testSuccessSoma" classname="CalculadoraTests" time="0.048"/>
+  <testcase name="testResto" classname="CalculadoraTests" time="0.004"/>
+  <testcase name="testResultado" classname="CalculadoraTests" time="0.001"/>
+  <testcase name="testUltimoNumero" classname="CalculadoraTests" time="0.005">
+    <system-out><![CDATA[--> Por último, selecione o último número:
+]]></system-out>
+  </testcase>
+  <testcase name="testSuccessSubtracao" classname="CalculadoraTests" time="0.005"/>
+  <testcase name="testGetOperacao" classname="CalculadoraTests" time="0.003">
+    <system-out><![CDATA[--> Por favor, digite uma opção:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto de divisão
+--> Por favor, digite uma opção:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto de divisão
+--> Por favor, digite uma opção:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto de divisão
+--> Por favor, digite uma opção:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto de divisão
+--> Por favor, digite uma opção:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto de divisão
+--> Por favor, digite uma opção:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto de divisão
+Opção inválida!!!
+--> Por favor, digite uma opção:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto de divisão
+]]></system-out>
+  </testcase>
+  <testcase name="testPrimeiroNumero" classname="CalculadoraTests" time="0.0">
+    <system-out><![CDATA[--> Digite o primeiro número:
+]]></system-out>
+  </testcase>
+  <testcase name="testDivisao" classname="CalculadoraTests" time="0.002"/>
+  <testcase name="testMultiplicacao" classname="CalculadoraTests" time="0.0"/>
 </testsuite>
