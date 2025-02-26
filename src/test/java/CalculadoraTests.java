@@ -29,5 +29,11 @@ public class CalculadoraTests {
         assertEquals(5,divisao);
     }
 
+    @Test
+    public void testResto() {
+        Integer resto = Calculadora.resto(20, 4);
+        assertEquals(0,resto);
+    }
+
 
 }
