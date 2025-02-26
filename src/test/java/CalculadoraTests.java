@@ -1,4 +1,8 @@
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayInputStream;
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -43,6 +47,59 @@ public class CalculadoraTests {
         assertEquals(2, Calculadora.resultado('/', 6, 3));
         assertEquals(1, Calculadora.resultado('%', 7, 3));
 
+    }
+
+    @Test
+    public void testGetOperacao() {
+
+        String input = "+\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        Scanner scanner = new Scanner(System.in);
+        assertEquals('+', Calculadora.getOperacao(scanner));
+
+        input = "-\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        scanner = new Scanner(System.in);
+        assertEquals('-', Calculadora.getOperacao(scanner));
+
+        input = "*\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        scanner = new Scanner(System.in);
+        assertEquals('*', Calculadora.getOperacao(scanner));
+
+
+        input = "/\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        scanner = new Scanner(System.in);
+        assertEquals('/', Calculadora.getOperacao(scanner));
+
+        input = "%\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        scanner = new Scanner(System.in);
+        assertEquals('%', Calculadora.getOperacao(scanner));
+
+        // Simulando entrada inválida seguida de uma válida
+        input = "x\n-\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        scanner = new Scanner(System.in);
+        assertEquals('-', Calculadora.getOperacao(scanner));
+
+    }
+
+    @Test
+    public void testPrimeiroNumero() {
+        String input = "11";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        Scanner scanner = new Scanner(System.in);
+        assertEquals(11, Calculadora.getPrimeiroNumero(scanner));
+    }
+
+    @Test
+    public void testUltimoNumero() {
+        String input = "22";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        Scanner scanner = new Scanner(System.in);
+        assertEquals(22, Calculadora.getUltimoNumero(scanner));
     }
 
 
